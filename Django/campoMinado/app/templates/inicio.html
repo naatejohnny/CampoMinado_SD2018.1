@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<br>
+	<h3><p>Defina o tamanho do Tebuleiro</p></h3>
+	<h3><p>Mínimo: 2x2</p></h3>
+	<form  action="jogada" method="post">
+		{% csrf_token %}
+		<p>
+		<label>Tamanho do Tabuleiro</label>
+		</p>
+		{{ entrada.linha }}
+		<label>X</label>
+		{{ entrada.coluna }}
+		<br>
+		<br>
+		<p>
+		<input type="submit" name="iniciar" value="TU INICIA O JOGO AQUI ABESTADOO! APERTA ESSE BUTÃO!!!!">
+		</p>
+		<br>
+	</form>
+{% endblock %}
